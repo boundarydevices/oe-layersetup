@@ -1,0 +1,19 @@
+# This file takes repo entries in the format
+# repo name,repo uri,repo branch,repo commit[,layers=layer1:layer2...:layern]
+
+bitbake,https://git.openembedded.org/bitbake,2.0,6c1ffa9091d0c53a100e8c8c15122d28642034bd
+meta-arago,https://git.yoctoproject.org/meta-arago,kirkstone,09.01.00.003,layers=meta-arago-distro:meta-arago-extras:meta-arago-demos:meta-arago-test
+#meta-browser,https://github.com/OSSystems/meta-browser.git,master,5f365ef0f842ba4651efe88787cf9c63bc8b6cb3,layers=
+meta-qt5,https://github.com/meta-qt5/meta-qt5.git,kirkstone,ae8a97f79364bed1abc297636f7933d0e35f22be,layers=
+meta-virtualization,https://git.yoctoproject.org/meta-virtualization,kirkstone,2d8b3cba8ff27c9ec2187a52b6a551fe1dcfaa07,layers=
+meta-openembedded,https://git.openembedded.org/meta-openembedded,kirkstone,79a6f60dabad9e5b0e041efa91379447ef030482,layers=meta-networking:meta-python:meta-oe:meta-gnome:meta-filesystems
+meta-ti,https://git.yoctoproject.org/meta-ti,kirkstone,09.01.00.003,layers=meta-ti-extras:meta-ti-bsp
+meta-arm,https://git.yoctoproject.org/meta-arm,kirkstone,b187fb9232ca0a6b5f8f90b4715958546fc41d73,layers=meta-arm:meta-arm-toolchain
+#meta-clang,https://github.com/kraj/meta-clang,kirkstone,HEAD,layers=
+oe-core,https://git.openembedded.org/openembedded-core,kirkstone,56503e3e80603de3b69acef2f6d32836bc9e5e5d,layers=meta
+OECORELAYERCONF=./sample-files/bblayers.conf.sample
+OECORELOCALCONF=./sample-files/local-arago64-v2.conf.sample
+BITBAKE_INCLUSIVE_VARS=yes
+meta-tisdk,https://git.ti.com/cgit/ti-sdk-linux/meta-tisdk,kirkstone,09.01.00.06,layers=
+LOCALCONF:DISTRO_FEATURES:append = " virtualization"
+LOCALCONF:ARAGO_BRAND = "foundational_sdk"

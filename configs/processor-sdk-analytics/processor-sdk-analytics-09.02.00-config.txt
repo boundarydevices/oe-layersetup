@@ -1,0 +1,16 @@
+# This file takes repo entries in the format
+# repo name,repo uri,repo branch,repo commit[,layers=layer1:layer2...:layern]
+
+bitbake,https://git.openembedded.org/bitbake,2.0,40fd5f4eef7460ca67f32cfce8e229e67e1ff607
+meta-arago,https://git.yoctoproject.org/meta-arago,kirkstone,98f178314931635c8641d1394dfd4341b86b6be2,layers=meta-arago-distro:meta-arago-extras:meta-arago-demos:meta-arago-test
+meta-qt5,https://github.com/meta-qt5/meta-qt5.git,kirkstone,ae8a97f79364bed1abc297636f7933d0e35f22be,layers=
+meta-virtualization,https://git.yoctoproject.org/meta-virtualization,kirkstone,cb2bc17e96552cdfc141d27bd9f4dbd95a872846,layers=
+meta-openembedded,https://git.openembedded.org/meta-openembedded,kirkstone,8bb16533532b6abc2eded7d9961ab2a108fd7a5b,layers=meta-networking:meta-python:meta-oe:meta-gnome:meta-filesystems
+meta-ti,https://git.yoctoproject.org/meta-ti,kirkstone,376a2143533c6497b4e79304eccca2a630784436,layers=meta-ti-extras:meta-ti-bsp
+meta-arm,https://git.yoctoproject.org/meta-arm,kirkstone,d7b7b6fb6c7c5545e718e44f38853d1718ce5446,layers=meta-arm:meta-arm-toolchain
+oe-core,https://git.openembedded.org/openembedded-core,kirkstone,1b5405955c7c2579ed1f52522e2e177d0281fa33,layers=meta
+meta-tisdk,https://git.ti.com/git/ti-sdk-linux/meta-tisdk.git,kirkstone,b127f5f2a16fdc092a339939cf04c2fc92f15a34,layers=
+meta-edgeai,https://git.ti.com/git/edgeai/meta-edgeai.git,kirkstone,0de8484d01ea85a7c366e6b56b1119613321dddb,layers=
+OECORELAYERCONF=./sample-files/bblayers.conf.sample
+OECORELOCALCONF=./sample-files/local-arago64-v2.conf.sample
+BITBAKE_INCLUSIVE_VARS=yes
